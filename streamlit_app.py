@@ -50,11 +50,6 @@ if category=="Technology":
         "Select Subcategories",
         ("Phones", "Accessories", "Machines", "Copiers")
     )
-df.set_index('subcategories', inplace=True)
-sales_by_subcategory = df.filter(items=['Sales']).groupby(pd.Grouper(freq='M')).sum()
-
-st.dataframe(sales_by_subcategory)
-st.line.chart(sales_by_subcategory, y="Sales")
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
