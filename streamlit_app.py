@@ -50,9 +50,7 @@ if category=="Technology":
         "Select Subcategories",
         ("Phones", "Accessories", "Machines", "Copiers")
     )
-
- filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
-
+filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
 st.line_chart(filtered_data["Sales"])
 
 st.write("## Your additions")
