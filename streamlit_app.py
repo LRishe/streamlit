@@ -56,6 +56,7 @@ if subcategories:
         sales_data = Sales[category, subcategories]
         profit = Profit[category, subcategories]
 
+st.line_chart(sales_data)
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
