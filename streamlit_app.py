@@ -51,7 +51,7 @@ if category=="Technology":
         ("Phones", "Accessories", "Machines", "Copiers")
     )
 
- if subcategories:
+ if subcategories=="Chair"
     sales_data = Sales[category, subcategories]
     profit_data = Profitcategory, subcategories]
 
