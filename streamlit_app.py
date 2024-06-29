@@ -31,20 +31,20 @@ st.line_chart(sales_by_month, y="Sales")
 
 category = st.selectbox(
     "Select Category",
-    ("Furniture", "Office Supplies", "Technology"))
+    ("Furniture", "Office Supplies", "Technology")),
 st.write("You selected:", category)
 
 if category=="Furniture":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Bookcases", "Chairs", "Tables", "Furnishings")
+        ("Bookcases", "Chairs", "Tables", "Furnishings"),
         st.write("You selected:", subcategories)
     )
 
 if category=="Office Supplies":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Labels", "Storage", "Art", "Binders", "Appliances", "Paper", "Envelopes", "Fasteners")
+        ("Labels", "Storage", "Art", "Binders", "Appliances", "Paper", "Envelopes", "Fasteners"),
         st.write("You selected:", subcategories)
     )
 
