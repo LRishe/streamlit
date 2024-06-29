@@ -34,6 +34,11 @@ category = st.selectbox(
     ("Furniture", "Office Supplies", "Technology"))
 st.write("You selected:", category)
 
+if category=="Furniture":
+    selected_subcategories = st.multiselect(
+        "Select subcategories",
+        ("Bookcases", "Chairs", "Tables", "Furnishings")
+    )
 
 subcategory = st.multiselect(
     "Select Sub-Categories",
