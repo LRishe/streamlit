@@ -51,7 +51,7 @@ if category=="Office Supplies":
 if category=="Technology":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Phones", "Accessories", "Copiers", "Machines")
+        ("Phones", "Accessories", "Copiers", "Machines"),
         st.write("You selected:", subcategories)
     )
 
