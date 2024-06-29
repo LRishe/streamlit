@@ -36,22 +36,22 @@ category = st.selectbox(
 if category=="Furniture":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Tables", "Chairs", "Bookcases", "Furnishings")
+        ("Tables", "Chairs", "Bookcases", "Furnishings").unique()
     )
 
 if category=="Office Supplies":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Art", "Storage", "Binders", "Appliances", "Paper", "Envelopes", "Labels", "Fasteners", "Supplies")
+        ("Art", "Storage", "Binders", "Appliances", "Paper", "Envelopes", "Labels", "Fasteners", "Supplies").unique()
     )
 
 if category=="Technology":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Phones", "Accessories", "Machines", "Copiers")
+        ("Phones", "Accessories", "Machines", "Copiers").unique()
     )
 filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
-sales_by_month_subcategories = filtered_data.groupby([pd.Grouper(freq='M'), 'Sub-Category']).sum().unstack().fillna(0)
+sales_by_month_filtered = filtered_data.groupby(pd.Grouper(freq='M')).sum()
 st.line_chart(sales_by_month_filtered, y="Sales")
 
 st.write("## Your additions")
