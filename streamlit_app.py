@@ -36,19 +36,19 @@ category = st.selectbox(
 if category=="Furniture":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Tables", "Chairs", "Bookcases", "Furnishings").unique()
+        ("Tables", "Chairs", "Bookcases", "Furnishings")
     )
 
 if category=="Office Supplies":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Art", "Storage", "Binders", "Appliances", "Paper", "Envelopes", "Labels", "Fasteners", "Supplies").unique()
+        ("Art", "Storage", "Binders", "Appliances", "Paper", "Envelopes", "Labels", "Fasteners", "Supplies")
     )
 
 if category=="Technology":
     subcategories = st.multiselect(
         "Select Subcategories",
-        ("Phones", "Accessories", "Machines", "Copiers").unique()
+        ("Phones", "Accessories", "Machines", "Copiers")
     )
 filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
 sales_by_month_filtered = filtered_data.groupby(pd.Grouper(freq='M')).sum()
