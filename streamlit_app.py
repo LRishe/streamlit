@@ -35,22 +35,27 @@ category = st.selectbox(
 st.write("You selected:", category)
 
 if category=="Furniture":
-    selected_subcategories = st.multiselect(
+    subcategories = st.multiselect(
         "Select Subcategories",
         ("Bookcases", "Chairs", "Tables", "Furnishings")
+        st.write("You selected:", subcategories)
     )
 
 if category=="Office Supplies":
-    selected_subcategories = st.multiselect(
+    subcategories = st.multiselect(
         "Select Subcategories",
         ("Labels", "Storage", "Art", "Binders", "Appliances", "Paper", "Envelopes", "Fasteners")
+        st.write("You selected:", subcategories)
     )
 
 if category=="Technology":
-    selected_subcategories = st.multiselect(
+    subcategories = st.multiselect(
         "Select Subcategories",
         ("Phones", "Accessories", "Copiers", "Machines")
+        st.write("You selected:", subcategories)
     )
+
+st.line_chart(subcategories, y="Sales")
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
