@@ -32,12 +32,14 @@ st.line_chart(sales_by_month, y="Sales")
 category = st.selectbox(
     "Select Category",
     ("Furniture", "Office Supplies", "Technology"))
+st.write("You selected:", category
 
 
 subcategory = st.multiselect(
-    "Select sub-category",
+    "Select Sub-Categories",
     ["Accessories", "Appliances", "Art", "Binders", "Bookcases", "Chairs", "Copiers", "Envelopes", "Fasteners", "Furnishings", "Labels", "Machines", "Paper", "Phones", "Storage", "Supplies", "Tables"]
     )
+st.write("You selected:", subcategory)
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
