@@ -50,9 +50,9 @@ if category=="Technology":
         "Select Subcategories",
         ("Phones", "Accessories", "Machines", "Copiers")
     )
-filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
-sales_by_month_filtered = filtered_data.groupby(pd.Grouper(freq='M'))
-st.line_chart(sales_by_month_filtered, y="Sales", color="#04f")
+    filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
+    sales_by_month_filtered = filtered_data.groupby(pd.Grouper(freq='M')).sum()
+    st.line_chart(sales_by_month_filtered["Sales"])
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
