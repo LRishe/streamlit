@@ -51,7 +51,7 @@ if category=="Technology":
         ("Phones", "Accessories", "Machines", "Copiers")
     )
 filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
-st.line_chart(filtered_data["Sales"])
+st.line_chart(filtered_data)
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
