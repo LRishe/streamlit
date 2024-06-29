@@ -64,6 +64,10 @@ overall_total_profit = df["Profit"].sum()
 overall_avg_profit_margin = (overall_total_profit / overall_total_sales) * 100
 delta_profit_margin = overall_profit_margin - overall_avg_profit_margin
 
+st.metric(label="Total Sales", value=f"${total_sales:,.2f}")
+st.metric(label="Total Profit", value=f"${total_profit:,.2f}")
+st.metric(label="Overall Profit Margin", value=f"{overall_profit_margin:.2f}%", delta=f"{delta_profit_margin:.2f}%")
+
 
 st.write("## Your additions")
 st.write("### (1) add a drop down for Category (https://docs.streamlit.io/library/api-reference/widgets/st.selectbox)")
