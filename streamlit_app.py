@@ -31,9 +31,7 @@ st.line_chart(sales_by_month, y="Sales")
 
 category = st.selectbox(
     "Select Category",
-    ("Furniture", "Office Supplies", "Technology"),
-st.write("You selected:", category)
-)
+    ("Furniture", "Office Supplies", "Technology"))
 
 
 st.write("## Your additions")
