@@ -52,7 +52,6 @@ if category=="Technology":
     )
 filtered_data = df[(df["Category"] == category) & (df["Sub_Category"].isin(subcategories))]
 sales_by_month_filtered = filtered_data.groupby(pd.Grouper(freq='M')).sum()
-st.line_chart(sales_by_month_filtered, y="Sales")
 st.line_chart(sales_by_month_filtered, y="Sales", color="#04f")
 
 st.write("## Your additions")
