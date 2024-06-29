@@ -52,8 +52,8 @@ if category=="Technology":
     )
 
  if subcategories=="Chair"
-    sales_data = Sales[category, subcategories]
-    profit_data = Profitcategory, subcategories]
+        sales_data = Sales[category, subcategories]
+        profit_data = Profitcategory, subcategories]
 
 st.line_chart(sales_data)
 
