@@ -36,7 +36,7 @@ category = st.selectbox(
 
 subcategory = st.multiselect(
     "Select sub-category",
-    ["Accessories", "Appliances, "Art", "Binders", "Bookcases", "Chairs", "Copiers", "Envelopes", "Fasteners", "Furnishings", "Labels", "Machines", "Paper", "Phones", "Storage", "Supplies", "Tables"],
+    ["Accessories", "Appliances", "Art", "Binders", "Bookcases", "Chairs", "Copiers", "Envelopes", "Fasteners", "Furnishings", "Labels", "Machines", "Paper", "Phones", "Storage", "Supplies", "Tables"]
     )
 
 st.write("## Your additions")
